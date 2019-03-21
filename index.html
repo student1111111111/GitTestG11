@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <style>
-        table,
-        td {
-            border: 2px solid black
-        }
-    </style>
-</head>
+  </head>
 
-<body>
-    My text 111666
-    BBB222777
-    <script src="./src/myScipt.js">
-
+  <body>
+    <script>
+      let row = prompt('Enter elements', '')
+      let arr = row.split(' ')
+      let s = 0
+      document.write('<table border="2px solid black">')
+      for (let i = 0; i < arr.length; i++) {
+        document.write(`<tr> <td>${arr[i]} </td> </tr>`)
+        s += parseFloat(arr[i])
+      }
+      document.write(`<tr>
+    <td>Sum=${s} </td>
+</tr>`)
+      document.write('</table>')
+      document.write(`Sum=${s}`)
     </script>
-</body>
-
+  </body>
 </html>
